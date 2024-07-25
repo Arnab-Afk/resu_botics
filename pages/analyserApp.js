@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Content from './content';
 import BackButton from '@/components/backButton';
-
+import Hero from './hero'
+import Card from './UploadCard';
 function AnalyserApp() {
   const [file, setFile] = useState(null);
   const [uploading, setUploading] = useState(false);
@@ -50,9 +51,10 @@ function AnalyserApp() {
 
   return (
     <>
+    <div className='bg-white'>
     <Hero/>
-    <BackButton/>
-      <div className='p-4 mt-20'>
+    <Card/>
+      {/* <div className='p-4 mt-20'>
         <button
           type="button"
           className="relative block w-full bg-black rounded-lg border-2 border-dashed border-gray-300 p-12 text-center hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
@@ -94,8 +96,9 @@ function AnalyserApp() {
           </p>
         
                     
-        )}
+        )} */}
         
+      {/* </div> */}
       </div>
     </>
   );
